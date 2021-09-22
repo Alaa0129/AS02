@@ -4,7 +4,7 @@ namespace Assignment02
 {
     public class Student 
     {
-        public int Id {get; set;}
+        public int Id {get; init;}
         public string GivenName {get; set;}
         public string Surname {get; set;}
         public Status Status {get;}
@@ -12,14 +12,34 @@ namespace Assignment02
         public DateTime EndDate {get; set;}
         public DateTime GraduationDate {get; set;}
         
+        Status GetStudentstatus() 
+        {
+            //Switch statement som tjekker den nuværende dato, hvis datoen idag er senere end gd så sæt til graduated
+            var d = DateTime.Now;
 
-        // TODO: Add the Enum "status" to the print method
+            if (DateTime.Compare(d, StartDate) == 0)
+            {
+                return Status.New;
+            }
+            else if (DateTime.Compare(d, EndDate) < 0 && DateTime.Compare(d, StartDate) > 0)
+            {
+                return Status.Active;
+            }
+            else if (DateTime.Compare(d,GraduationDate) >= 0)
+            {    
+                return Status.Graduated; 
+            }
+            else
+            {
+                return Status.Dropout;
+            }
+        }
+
         public override string ToString() 
         {
-            return Id + ": " + GivenName + " " + Surname + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
+            return Id + ": " + GivenName + " " + Surname + " | status: " + GetStudentstatus() + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
             
-        } 
-
+        }
     }
 
 
