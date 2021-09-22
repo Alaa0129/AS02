@@ -2,7 +2,7 @@ using System;
 
 namespace Assignment02
 {
-    public class student 
+    public class Student 
     {
         public int Id {get; set;}
         public string GivenName {get; set;}
@@ -17,6 +17,7 @@ namespace Assignment02
         public override string ToString() 
         {
             return Id + ": " + GivenName + " " + Surname + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
+            
         } 
 
     }
