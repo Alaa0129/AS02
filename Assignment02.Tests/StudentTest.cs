@@ -21,7 +21,7 @@ namespace Assignment02.Tests
             };
 
             //When
-            var expected = "1: Mohammad Hasham | status: Active | start date: 22.09.2021 00.00.00 | end date: 24.06.2024 00.00.00 | graduation date: 22.06.2024 00.00.00."; 
+            var expected = "1: Mohammad Hasham | status: Active | start date: 09/22/2021 00:00:00 | end date: 06/24/2024 00:00:00 | graduation date: 06/22/2024 00:00:00."; 
             var actual = s1.ToString();
 
             //Then
@@ -70,7 +70,7 @@ namespace Assignment02.Tests
             );
 
             //When
-            var expected = "ImmutableStudent { GId = 1, GgivenName = Mohammad, GsurName = Hasham, Gstatus = Active, GstartDate = 22.09.2021 00.00.00, GendDate = 24.06.2024 00.00.00, GgraduationDate = 22.06.2024 00.00.00 }"; 
+            var expected = "ImmutableStudent { GId = 1, GgivenName = Mohammad, GsurName = Hasham, Gstatus = Active, GstartDate = 09/22/2021 00:00:00, GendDate = 06/24/2024 00:00:00, GgraduationDate = 06/22/2024 00:00:00}"; 
             var actual = s1.ToString();
 
             //Then
