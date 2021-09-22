@@ -6,11 +6,14 @@ namespace Assignment02
     {
         public int Id {get; init;}
         public string GivenName {get; set;}
-        public string Surname {get; set;}
+        public string SurName {get; set;}
         public Status Status {get;}
         public DateTime StartDate {get; set;}
         public DateTime EndDate {get; set;}
         public DateTime GraduationDate {get; set;}
+        
+        public record ImmutableStudent(int GId, string GgivenName,string GsurName, Status Gstatus, DateTime GstartDate,DateTime GendDate,DateTime GgraduationDate);
+
         
         Status GetStudentstatus() 
         {
@@ -37,10 +40,8 @@ namespace Assignment02
 
         public override string ToString() 
         {
-            return Id + ": " + GivenName + " " + Surname + " | status: " + GetStudentstatus() + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
-            
+            return Id + ": " + GivenName + " " + SurName + " | status: " + GetStudentstatus() + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
         }
     }
-
-
 }
+
