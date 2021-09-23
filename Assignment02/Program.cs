@@ -17,7 +17,7 @@ namespace Assignment02
             };
             var s2 = new ImmutableStudent(1,"Mohammad","Hasham", Status.Active,new DateTime(2021, 09, 22, 00, 00, 00), new DateTime(2024, 06, 24, 00, 00, 00),new DateTime(2024, 06, 22, 00, 00, 00));
             var s3 = s2;
-            Console.WriteLine(s1);
+            s1.ToString();
             Console.WriteLine(s2);
             Console.WriteLine(s2.Equals(s3));
         }

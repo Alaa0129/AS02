@@ -37,7 +37,9 @@ namespace Assignment02
 
         public override string ToString() 
         {
-            return Id + ": " + GivenName + " " + SurName + " | status: " + GetStudentstatus() + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
+            var print = Id + ": " + GivenName + " " + SurName + " | status: " + GetStudentstatus() + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
+            Console.WriteLine(print);
+            return print;
         }
     }
 
