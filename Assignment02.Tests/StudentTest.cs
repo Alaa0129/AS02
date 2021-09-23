@@ -33,7 +33,7 @@ namespace Assignment02.Tests
         public void Given_two_record_students_prints_true_if_equal()
         {
             //Given
-            var s1 = new Student.ImmutableStudent
+            var s1 = new ImmutableStudent
             (
                 1,
                 "Mohammad",
@@ -58,7 +58,7 @@ namespace Assignment02.Tests
         public void Given_a_record_student_prints_description()
         {
             //Given
-            var s1 = new Student.ImmutableStudent
+            var s1 = new ImmutableStudent
             (
                 1,
                 "Mohammad",
