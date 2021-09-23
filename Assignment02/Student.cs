@@ -12,9 +12,6 @@ namespace Assignment02
         public DateTime EndDate {get; set;}
         public DateTime GraduationDate {get; set;}
         
-        public record ImmutableStudent(int GId, string GgivenName,string GsurName, Status Gstatus, DateTime GstartDate,DateTime GendDate,DateTime GgraduationDate);
-
-        
         Status GetStudentstatus() 
         {
             //Switch statement som tjekker den nuværende dato, hvis datoen idag er senere end gd så sæt til graduated
@@ -43,5 +40,8 @@ namespace Assignment02
             return Id + ": " + GivenName + " " + SurName + " | status: " + GetStudentstatus() + " | start date: " + StartDate + " | end date: " + EndDate + " | graduation date: " + GraduationDate + ".";
         }
     }
+
+    public record ImmutableStudent(int GId, string GgivenName,string GsurName, Status Gstatus, DateTime GstartDate,DateTime GendDate,DateTime GgraduationDate);
+
 }
 
